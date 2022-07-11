@@ -1,15 +1,15 @@
-# Project: Project6
+# Project: Project9
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = next_permutation.o
-LINKOBJ  = next_permutation.o
+OBJ      = longest_Consecutive_subsequence.o
+LINKOBJ  = longest_Consecutive_subsequence.o
 LIBS     = -L"C:/Users/palak modi/else/DEVCPP/MinGW64/lib" -L"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = next_permutation.exe
+BIN      = longest_consecutive_sub.exe
 CXXFLAGS = $(CXXINCS) -std=gnu++11
 CFLAGS   = $(INCS) -std=gnu++11
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-next_permutation.o: next_permutation.cpp
-	$(CPP) -c next_permutation.cpp -o next_permutation.o $(CXXFLAGS)
+longest_Consecutive_subsequence.o: longest_Consecutive_subsequence.cpp
+	$(CPP) -c longest_Consecutive_subsequence.cpp -o longest_Consecutive_subsequence.o $(CXXFLAGS)
