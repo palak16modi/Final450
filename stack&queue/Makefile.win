@@ -1,15 +1,15 @@
-# Project: Project3
+# Project: Project2
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = implementing_queue_array.o
-LINKOBJ  = implementing_queue_array.o
+OBJ      = next_large_element.o
+LINKOBJ  = next_large_element.o
 LIBS     = -L"C:/Users/palak modi/else/DEVCPP/MinGW64/lib" -L"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = implement_queue_array.exe
+BIN      = next_greater_element.exe
 CXXFLAGS = $(CXXINCS) -std=gnu++11
 CFLAGS   = $(INCS) -std=gnu++11
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-implementing_queue_array.o: implementing_queue_array.cpp
-	$(CPP) -c implementing_queue_array.cpp -o implementing_queue_array.o $(CXXFLAGS)
+next_large_element.o: next_large_element.cpp
+	$(CPP) -c next_large_element.cpp -o next_large_element.o $(CXXFLAGS)
