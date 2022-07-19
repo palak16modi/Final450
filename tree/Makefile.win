@@ -1,15 +1,15 @@
-# Project: Project1
+# Project: Project3
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = boundaryTraversal.o
-LINKOBJ  = boundaryTraversal.o
+OBJ      = tree_from_Pre&Inorder.o
+LINKOBJ  = tree_from_Pre&Inorder.o
 LIBS     = -L"C:/Users/palak modi/else/DEVCPP/MinGW64/lib" -L"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = boundaryTraversal.exe
+BIN      = tree_from_Pre&Inorder.exe
 CXXFLAGS = $(CXXINCS) -std=gnu++11
 CFLAGS   = $(INCS) -std=gnu++11
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-boundaryTraversal.o: boundaryTraversal.cpp
-	$(CPP) -c boundaryTraversal.cpp -o boundaryTraversal.o $(CXXFLAGS)
+tree_from_Pre&Inorder.o: tree_from_Pre&Inorder.cpp
+	$(CPP) -c tree_from_Pre&Inorder.cpp -o tree_from_Pre&Inorder.o $(CXXFLAGS)

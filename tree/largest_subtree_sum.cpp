@@ -1,7 +1,6 @@
-// print all root to leaf paths
+// largest subtree sum of a binary tree
 
 #include <iostream>
-#include <stack>
 using namespace std;
 
 struct Node{
@@ -16,25 +15,20 @@ struct Node{
 	}
 };
 
-stack<int> path;
-void printpath(){
-	if(path.empty()) return;
-	int t = path.top();
-	path.pop();
-	printpath();
-	cout<<t<<" ";
-	path.push(t);	
-}
-void rootToLeaf(Node* root){
-	if(root==NULL) return;
-	path.push(root->data);
-	rootToLeaf(root->left);
-	if(root->left==NULL && root->right==NULL) {
-		printpath();
-		cout<<endl;
+int solve(Node* root, int &maxSum){
+	if(root==NULL) return 0;
+	int sum = root->data + solve(root->left, maxSum) + solve(root->right, maxSum);
+	cout<<root->data<<" "<<sum<<endl;
+	if(sum > maxSum){
+		maxSum = sum;
 	}
-	rootToLeaf(root->right);
-	path.pop();
+    return sum;
+}
+
+int MaxSubtreeSum(Node* root){
+	int maxSum = INT_MIN;
+	solve(root,maxSum);
+	return maxSum;
 }
 
 int main(int argc, char** argv) {
@@ -45,6 +39,6 @@ int main(int argc, char** argv) {
 	root->left->right = new Node(5);
 	root->right->left = new Node(6);
 	root->right->right = new Node(7);
-	rootToLeaf(root);
+	cout<<MaxSubtreeSum(root);
 	return 0;
 }

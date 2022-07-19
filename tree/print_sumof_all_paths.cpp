@@ -1,4 +1,4 @@
-// print all root to leaf paths
+// print sum of all paths
 
 #include <iostream>
 #include <stack>
@@ -16,25 +16,15 @@ struct Node{
 	}
 };
 
-stack<int> path;
-void printpath(){
-	if(path.empty()) return;
-	int t = path.top();
-	path.pop();
-	printpath();
-	cout<<t<<" ";
-	path.push(t);	
-}
-void rootToLeaf(Node* root){
+void rootToLeaf(Node* root,int sum){
 	if(root==NULL) return;
-	path.push(root->data);
-	rootToLeaf(root->left);
+	sum = sum + root->data;
 	if(root->left==NULL && root->right==NULL) {
-		printpath();
-		cout<<endl;
+		cout<<sum<<endl;
+		return;
 	}
-	rootToLeaf(root->right);
-	path.pop();
+	rootToLeaf(root->left,sum);
+	rootToLeaf(root->right,sum);
 }
 
 int main(int argc, char** argv) {
@@ -45,6 +35,6 @@ int main(int argc, char** argv) {
 	root->left->right = new Node(5);
 	root->right->left = new Node(6);
 	root->right->right = new Node(7);
-	rootToLeaf(root);
+	rootToLeaf(root,0);
 	return 0;
 }
