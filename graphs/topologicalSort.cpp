@@ -18,7 +18,7 @@ class Graph{
 			}
 			s.push(node);
 		}
-		void topologicalSort(int v){
+		void topologicalSort(){
 			unordered_map<int,bool> visited;
 			stack<int> s;
 			for(auto i : adj){
@@ -48,6 +48,6 @@ int main(int argc, char** argv) {
 		cin>>u>>v;
 		g.addEdges(u,v);
 	}
-	g.topologicalSort(n);
+	g.topologicalSort();
 	return 0;
 }
