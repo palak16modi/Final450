@@ -1,3 +1,5 @@
+// find Number of customers who could not get a computer
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -16,7 +18,7 @@ int customerAndComputer(string comp, string people){
 			seats--;
 		}
 	}
-	return 0;
+	return extra;
 }
 
 int main(int argc, char** argv) {
