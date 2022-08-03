@@ -1,6 +1,6 @@
 [Project]
-FileName=rowMax1.dev
-Name=Project8
+FileName=rotate90.dev
+Name=Project1
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=rowMax1.cpp
+FileName=rotate90.cpp
 CompileCpp=1
 Folder=
 Compile=1
