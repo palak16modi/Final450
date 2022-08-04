@@ -1,4 +1,4 @@
-// Detect loop with floyd algorithm
+// finding middle element in a linkedlist
 
 #include <iostream>
 using namespace std;
@@ -51,48 +51,19 @@ class linkedlist{
 					temp = temp->next;
 				}
 				cout<<temp->data;
-			}
-			
+			}	
 		}
 		
-		void deletenode(int data){
-			if(head==NULL) cout<<"Empty";
-			Node* temp = head;
-			if(temp->data == data){
-				head = temp->next;
-				return;
-			}
-			while(temp!=NULL && temp->next->data != data){
-				temp = temp->next;
-			}
-			if(temp==NULL) cout<<"Not present";
-			else{
-				temp->next = temp->next->next;
-			}
-		}
-		
-		void createLoop(int k){
-			Node* temp = head;
-			while(temp && k--){
-				temp = temp->next;
-			}
-			Node* last = head;
-			while(last->next!=NULL){
-				last = last->next;
-			}
-			last->next = temp;
-		}
-		
-		// detect loop
-		bool isCycle(){
-			Node* slow=head;
+		int middleNode(){
+			Node* slow = head;
 			Node* fast = head;
-			while(slow && fast && fast->next){
+			while(fast->next != NULL){
 				slow = slow->next;
+				if(fast->next->next == NULL) return slow->data;
 				fast = fast->next->next;
-				if(slow==fast) return true;
+				
 			}
-			return false;
+			return slow->data;
 		}
 		
 };
@@ -105,12 +76,6 @@ int main(int argc, char** argv) {
 	list.create(40);
 	list.create(50);
 	list.create(60);
-	// list.deletenode(30);
-	// list.reverseIterative();
-	// list.head = list.reverseRecursive(list.head);
-	// list.head = list.reverse(list.head, 2);
-	list.createLoop(2);
-	cout<< list.isCycle();
-	// list.display();
+	cout<< list.middleNode();
 	return 0;
 }
