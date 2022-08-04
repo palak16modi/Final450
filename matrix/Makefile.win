@@ -4,12 +4,12 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = rotate90.o
-LINKOBJ  = rotate90.o
+OBJ      = median.o
+LINKOBJ  = median.o
 LIBS     = -L"C:/Users/palak modi/else/DEVCPP/MinGW64/lib" -L"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = rotate90.exe
+BIN      = median.exe
 CXXFLAGS = $(CXXINCS) -std=gnu++11
 CFLAGS   = $(INCS) -std=gnu++11
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-rotate90.o: rotate90.cpp
-	$(CPP) -c rotate90.cpp -o rotate90.o $(CXXFLAGS)
+median.o: median.cpp
+	$(CPP) -c median.cpp -o median.o $(CXXFLAGS)
