@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <stack>
+#include <vector>
 using namespace std;
 
 struct Node{
@@ -25,6 +26,7 @@ void printpath(){
 	cout<<t<<" ";
 	path.push(t);	
 }
+
 void rootToLeaf(Node* root){
 	if(root==NULL) return;
 	path.push(root->data);
