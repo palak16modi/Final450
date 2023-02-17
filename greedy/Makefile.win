@@ -4,12 +4,12 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = fractionalKnapsack.o
-LINKOBJ  = fractionalKnapsack.o
+OBJ      = stocks_ithDay.o
+LINKOBJ  = stocks_ithDay.o
 LIBS     = -L"C:/Users/palak modi/else/DEVCPP/MinGW64/lib" -L"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/palak modi/else/DEVCPP/MinGW64/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/palak modi/else/DEVCPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = fractionalKnapsack.exe
+BIN      = stocks_ithDay.exe
 CXXFLAGS = $(CXXINCS) -std=gnu++11
 CFLAGS   = $(INCS) -std=gnu++11
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-fractionalKnapsack.o: fractionalKnapsack.cpp
-	$(CPP) -c fractionalKnapsack.cpp -o fractionalKnapsack.o $(CXXFLAGS)
+stocks_ithDay.o: stocks_ithDay.cpp
+	$(CPP) -c stocks_ithDay.cpp -o stocks_ithDay.o $(CXXFLAGS)
